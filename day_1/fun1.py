@@ -79,5 +79,23 @@ print(1 + 2)  # 3
 # funkcja mnozenie zwraca wynik
 print(mnozenie(4, 5) + mnozenie(6, 2))  # 32
 
-print(mnozenie2(4,6)) # (4, 6, 24) -> krotka
+print(mnozenie2(4, 6))  # (4, 6, 24) -> krotka
 # 4 * 6 = 24
+print("%i * %i = %i" % mnozenie2(4, 6))
+# 4 * 6 = 24
+# rozpakowanie krotki
+a, b, wyn = mnozenie2(4, 6)  # (4, 6, 24)
+print(f"{a} * {b} = {wyn}")  # 4 * 6 = 24
+c = mnozenie2(6, 8)
+print(f"{c[0]} * {c[1]} = {c[2]}")  # 6 * 8 = 48
+tup = 1, 2, 3  # krotka
+print(type(tup))  # <class 'tuple'>
+a, *b = tup  # * worek na pozostałe dane
+print(a, b)  # 1 [2, 3]
+tupla_names = "Radek", "Tomek", "Zenek", "Danusia"
+name1, *name2, name3 = tupla_names
+print(f"{name1=}, {name2=}, {name3=}")
+# name1='Radek', name2=['Tomek', 'Zenek'], name3='Danusia'
+*name1, name2, name3 = tupla_names
+print(f"{name1=}, {name2=}, {name3=}")
+# name1=['Radek', 'Tomek'], name2='Zenek', name3='Danusia'
