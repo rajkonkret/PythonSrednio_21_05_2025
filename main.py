@@ -18,3 +18,5 @@ if __name__ == '__main__':
 # wheel, theme
 # (.venv) PS C:\Users\CSComarch\PycharmProjects\PythonSrednio_21_05_2025> python .\main.py
 # Hi, PyCharm
+# ctrl alt l - formatowanie kodu
+# https://peps.python.org/pep-0008/ - czysty kod w pythonie
