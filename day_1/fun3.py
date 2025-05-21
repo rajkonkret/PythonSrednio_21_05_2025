@@ -54,3 +54,25 @@ print(lista)
 # 4
 # 5
 # [1, 2, 3, 4, 5]
+
+r0 = {'miasto': "Toruń"}
+r1 = {"miasto": "Toruń", "ZIP": "25-900"}
+
+print(r0['miasto'])  # Toruń
+print(r1['miasto'])  # Toruń
+
+print(r1['ZIP'])
+# print(r0['ZIP']) # KeyError: 'ZIP'
+
+print(r0.get("ZIP"))  # None
+print(r0.get("ZIP", "00-000"))  # 00-000
+
+d_zip = lambda row: row.setdefault("ZIP", "00-000")
+print(d_zip(r0))
+print(d_zip(r1))
+# 00-000
+# 25-900
+print(r0)
+print(r1)
+# {'miasto': 'Toruń', 'ZIP': '00-000'}
+# {'miasto': 'Toruń', 'ZIP': '25-900'}
