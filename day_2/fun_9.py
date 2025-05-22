@@ -85,6 +85,7 @@ def add_zip():
     res = [a + b for a, b in zip(lista1, lista2)]
     return "OK ZIP"
 
+
 @measure_time
 def add_np():
     result = array1 + array2
