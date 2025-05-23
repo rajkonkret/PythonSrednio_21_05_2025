@@ -1,5 +1,6 @@
 import openai
 
+
 class ChatBot():
     def __init__(self, model='gpt-3.5-turbo'):
         self.client = openai.OpenAI(api_key='')
@@ -26,7 +27,8 @@ class ChatBot():
         self.add_message('assistant', model_messages)
         return model_messages
 
-bot =ChatBot()
+
+bot = ChatBot()
 if __name__ == '__main__':
     print("Starting")
     print(bot.get_response("Jak w python użyć lambda"))
