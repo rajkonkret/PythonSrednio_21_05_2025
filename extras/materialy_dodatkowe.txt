@@ -118,3 +118,7 @@ spam /= 1    spam = spam / 1
 spam %= 1    spam = spam % 1
 
 https://pl.altapps.net/soft/hackerrank-com
+pip freeze > requirements.pl
+
+ pip install pyinstaller
+ #  pyinstaller --onefile .\kl_14.py
