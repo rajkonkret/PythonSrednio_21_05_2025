@@ -12,7 +12,7 @@ kwadrat(5)
 # generator
 def kwadrat2(n):
     for x in range(n):
-        yield x ** 2  # zwraca wartośc obliczenia, zapamiętuje na której skońćzył
+        yield x ** 2  # zwraca wartośc obliczenia, zatrzymuje się i zapamiętuje na której skończył
 
 
 kwa = kwadrat2(5)  # inicjalizacja generatora
