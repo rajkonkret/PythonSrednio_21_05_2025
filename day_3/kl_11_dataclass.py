@@ -23,21 +23,25 @@ class Person:
         print("My name is:", self.first_name)
 
 
-p2 = Person("Jan", "Kowalski", 1)
-print(p2)  # Person(first_name='Jan', last_name='Kowalski', id=1)
-p2.greets()
+print(__name__)
+# __main__ - gdy urchamiamy bezpośrednio
+# kl_11_dataclass - gdy uruchamiany z innego pliku dostaje nazwe tego pliku
+if __name__ == '__main__':
+    p2 = Person("Jan", "Kowalski", 1)
+    print(p2)  # Person(first_name='Jan', last_name='Kowalski', id=1)
+    p2.greets()
 
-p3 = Person("Maciej", "Nowak", 2)
-print(p3)  # Person(first_name='Maciej', last_name='Nowak', id=2)
+    p3 = Person("Maciej", "Nowak", 2)
+    print(p3)  # Person(first_name='Maciej', last_name='Nowak', id=2)
 
-people = [p2, p3]
-print(people)
-# [Person(first_name='Jan', last_name='Kowalski', id=1), Person(first_name='Maciej', last_name='Nowak', id=2)]
+    people = [p2, p3]
+    print(people)
+    # [Person(first_name='Jan', last_name='Kowalski', id=1), Person(first_name='Maciej', last_name='Nowak', id=2)]
 
-# pickle wymaga binarne
-with open('dane.pckl', "wb") as f:
-    pickle.dump(people, f)
+    # pickle wymaga binarne
+    with open('dane.pckl', "wb") as f:
+        pickle.dump(people, f)
 
-# zapis tekstowy
-with open("lista.txt", "w") as fh:
-    fh.write(str(people))
+    # zapis tekstowy
+    with open("lista.txt", "w") as fh:
+        fh.write(str(people))
