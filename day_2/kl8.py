@@ -12,6 +12,14 @@ class Counter(ABC):
     def drukuj(self):
         pass  # nic nie rób
 
+    @staticmethod
+    def from_string():
+        print("Metoda statyczna")
+
+    @classmethod  # dodatkowy konstruktor (działa opodobnie jak przeciązanie)
+    def from_counter(cls, counter):
+        return cls(counter.values)
+
 
 class BoundedCounter(Counter):
     MAX = 100
@@ -35,8 +43,8 @@ class NewCounter(Counter):
 
 # TypeError: Can't instantiate abstract class Counter with abstract method drukuj
 # nie można stworzyc obiektów kalsy Counter bo ta klasa jest abstrakcyjna
-# wymuszamy koniecznośc dziedziczenia po tej klaasie
-# kalsa dziedzicząc musi nadpisac metode abstrakcyjną
+# wymuszamy koniecznośc dziedziczenia po tej klasie
+# klasa dziedzicząc musi nadpisac metode abstrakcyjną
 # c1 = Counter()
 # c1.increment()
 # print(c1.values)
@@ -45,3 +53,10 @@ bc = BoundedCounter(30)
 bc.drukuj()  # Drukuje 3
 # TypeError: Can't instantiate abstract class NewCounter with abstract method drukuj
 # nc = NewCounter()
+# metoda statyczna m- ni epotrzebujemy tworzyc obiektu klasy by użyc
+Counter.from_string()  # Metoda statyczna
+
+# wykorzystanie classmethod jako konstruktor obiektu
+# inny niz podany w __init__
+bc3 = BoundedCounter.from_counter(bc)
+bc3.drukuj()  # Drukuje 30
