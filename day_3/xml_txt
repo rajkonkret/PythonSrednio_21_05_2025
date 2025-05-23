@@ -1,0 +1,17 @@
+xml_string =
+"""
+<bookstore>
+<book category="fiction">
+<title>The Great Gatsby</title>
+<author>F. Scott Fitzgerald</author>
+<year>1925</year>
+<price>10.99</price>
+</book>
+<book category="non-fiction">
+<title>A Brief History of Time</title>
+<author>Stephen Hawking</author>
+<year>1988</year>
+<price>15.99</price>
+</book>
+</bookstore>
+"""
