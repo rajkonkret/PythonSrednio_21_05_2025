@@ -42,6 +42,6 @@ class NewCounter(Counter):
 # print(c1.values)
 # c1.drukuj()
 bc = BoundedCounter(30)
-bc.drukuj()  # Drukuje 30
+bc.drukuj()  # Drukuje 3
 # TypeError: Can't instantiate abstract class NewCounter with abstract method drukuj
 # nc = NewCounter()
